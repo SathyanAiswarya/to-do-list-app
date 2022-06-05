@@ -15,10 +15,10 @@ function newItem() {
 
 
     //deleting the item by clicking on cross and striking the item in double click. 
-        let crossOutButton = $('<crossOutButton></crossOutButton>');
-        crossOutButton.append(document.createTextNode('X'));
-        li.append(crossOutButton);
-    
+    let crossOutButton = $('<crossOutButton></crossOutButton>');
+    crossOutButton.append(document.createTextNode('X'));
+    li.append(crossOutButton);
+
 
     crossOutButton.on('click', function () {
         li.addClass('delete');
