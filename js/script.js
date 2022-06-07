@@ -11,13 +11,13 @@ function newItem() {
     else {
         $('#list').append(li);
         console.log(textValue);
-    }
+
+        //deleting the item by clicking on cross and striking the item in double click. 
+        let crossOutButton = $('<button></button>');
+        crossOutButton.append(document.createTextNode('X'));
+        li.append(crossOutButton);
 
 
-    //deleting the item by clicking on cross and striking the item in double click. 
-    let crossOutButton = $('<crossOutButton></crossOutButton>');
-    crossOutButton.append(document.createTextNode('X'));
-    li.append(crossOutButton);
 
 
     crossOutButton.on('click', function () {
