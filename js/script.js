@@ -18,15 +18,17 @@ function newItem() {
         li.append(crossOutButton);
 
 
+        crossOutButton.on('click', function () {
+            li.addClass('delete');
+        });
+
+        li.on('dblclick', function () {
+            li.toggleClass('strike');
+        });
+    }
 
 
-    crossOutButton.on('click', function () {
-        li.addClass('delete');
-    });
 
-    li.on('dblclick', function () {
-        li.toggleClass('strike');
-    });
 
     // rearranging the list
     $('#list').sortable();
